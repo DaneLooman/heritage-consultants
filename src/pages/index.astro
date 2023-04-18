@@ -1,12 +1,44 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { contentfulClient } from "../lib/contentful.js";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { Document } from "@contentful/rich-text-types";
+import type { BlogPost } from "../lib/contentful";
+
+const entries = await contentfulClient.getEntries<BlogPost>({
+  content_type: "blogPost",
+  limit: 4,
+});
+
+const posts = entries.items.map((item) => {
+  const { title, date, description, slug, image, type } = item.fields;
+  return {
+    title,
+    slug,
+    description,
+    date: new Date(date).toLocaleDateString(undefined,{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
+	imageDesc: image.fields.description,
+	imageURL: image.fields.file.url,
+	type
+  };
+});
+
+console.log(posts); 
 ---
 
 <Layout title="Heritage Consultants">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Heritage Consulants</span></h1>
-	</main>
+	<h1>Welcome to <span class="text-gradient">Heritage Consulants</span></h1>
+	<ul>
+		{posts.map((post) => (
+		  <li>
+			<a href={`/posts/${post.slug}/`}>
+			  <h2>{post.title}</h2>
+			</a>
+			<time>{post.date}</time>
+			<p>{post.description}</p>
+		  </li>
+		))}
+	  </ul>
 </Layout>
 
 <style>
