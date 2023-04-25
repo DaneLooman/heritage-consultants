@@ -5,6 +5,11 @@ export interface Props {
 	pageForHeader: string;
 	description: string;
 }
+import '@fontsource/Roboto';
+import '@fontsource/Roboto/100.css';
+import '@fontsource/Roboto/400.css';
+import '@fontsource/Roboto/500.css';
+import '@fontsource/Roboto/700.css';
 
 const { title , pageForHeader, description } = Astro.props;
 ---
@@ -30,9 +35,10 @@ const { title , pageForHeader, description } = Astro.props;
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: roboto, sans-serif;
 		background-color: #F6F6F6;
 	}
 	code {
@@ -43,8 +49,7 @@ const { title , pageForHeader, description } = Astro.props;
 		margin:0px;
 	}
 	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+		margin: 0px auto;
+		padding: 0px;
 	}
 </style>

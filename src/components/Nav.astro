@@ -75,9 +75,13 @@ links.forEach(link => {
         align-items: end;
     }
     header{
+        display: flex;
+        align-items: center;
         height:70px;
         background-color:#fff;
         border-bottom:1px solid #0063A7;
+        width: 100%;
+        justify-content: center;
     }
     #nav--contain{
         display: flex;
@@ -91,6 +95,7 @@ links.forEach(link => {
         margin-left:40px;
         border:0px solid #fff;
         background-color: #fff;
+        cursor: pointer;
     }
     #nav--logo__image{
         background-color: #fff;
@@ -234,6 +239,9 @@ links.forEach(link => {
 
         #mobileNav{
             display: flex;
+        }
+        nav {
+            margin-right:8px;
         }
         nav > a , #nav--contact{
             display: none;
