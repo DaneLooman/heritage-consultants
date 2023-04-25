@@ -26,19 +26,9 @@ const posts = entries.items.map((item) => {
 console.log(posts); 
 ---
 
-<Layout title="Heritage Consultants">
-	<h1>Welcome to <span class="text-gradient">Heritage Consulants</span></h1>
-	<ul>
-		{posts.map((post) => (
-		  <li>
-			<a href={`/posts/${post.slug}/`}>
-			  <h2>{post.title}</h2>
-			</a>
-			<time>{post.date}</time>
-			<p>{post.description}</p>
-		  </li>
-		))}
-	  </ul>
+<Layout title="Heritage Consultants" 
+	pageForHeader="home" 
+	description="Heritage Consultants offers archaeological, GIS, architectural history, interpretive planning, grant writing, litigation research and much more.">
 </Layout>
 
 <style>
