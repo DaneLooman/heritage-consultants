@@ -1,0 +1,301 @@
+---
+
+---
+
+<section id="services">
+    <div id="services--selector">
+        <h2>Services</h2>
+        <button data-topic="arch" data-height="112" class="services--button active">Archaeology<span class="slider"></span></button>
+        <button data-topic="history" data-height="190" class="services--button">Architectural History<span class="slider"></span></button>
+        <button data-topic="gis" data-height="282" class="services--button">Geophysical Surveys <br>Remote Sensing<span class="slider"></span></button>
+        <button data-topic="cemetery" data-height="388" class="services--button">Cemetery Evaluation <br>and Excavation<span class="slider"></span></button>
+        <span id="services--block"></span>
+    </div>
+    <div id="services--selector--mobile">
+        <h2>Services</h2>
+        <select id="services--picker__mobile">
+            <option data-topic="arch">Archaeology</option>
+            <option data-topic="history">Architectural History</option>
+            <option data-topic="gis">Geophysical Surveys Remote Sensing</option>
+            <option data-topic="cemetery">Cemetery Evaluation and Excavation</option>
+        </select>    
+    </div>
+
+    <div id="services--descs">
+        <div id="arch" class="services--descs--contain active">
+            <h3>Archaeology</h3>
+            <p>Archaeological investigation is undertaken in a phased approach, including assessment of the project area (Phase IA), identification and recordation of archaeological resources (Phase IB), assessment of their National Register eligibility (Phase II), and mitigation of potential impacts to significant archaeological resources through avoidance or data recovery (Phase III). To successfully navigate this process, we employ a variety of strategies including consultation with interested parties, traditional archaeological excavation, remote sensing, GIS applications, construction monitoring, and detailed reporting of findings, among others. All of our projects are conducted in compliance with all Federal, state, and/or local regulations.            </p>
+            <a href="#">View Case Study</a>
+        </div>
+        <div id="history" class="services--descs--contain">
+            <h3>Architectural History</h3>
+            <p></p>
+            <a href="#">View Case Study</a>
+        </div>
+        <div id="gis" class="services--descs--contain">
+            <h3>Geophysical Surveys Remote Sensing</h3>
+            <p></p>
+            <a href="#">View Case Study</a>
+        </div>
+        <div id="cemetery" class="services--descs--contain">
+            <h3>Cemetery Evaluation and Excavation</h3>
+            <p></p>
+            <a href="#">View Case Study</a>
+        </div>
+    </div>
+    <div id="services--images">
+        <div id="services--images--contain">
+            <img id="arch--image" class="active" src="arch.webp" alt="Picture of a historical red bridge" loading="lazy">
+            <img id="history--image" class="" src="history.webp" alt="Picture of classic colonial white house" loading="lazy">
+            <img id="gis--image" class="" src="GIS.webp" alt="Classic weathered map of Hartford" loading="lazy">
+            <img id="cemetery--image" class="" src="cemetery.webp" alt="Image of cemetery being excavated" loading="lazy">
+            <div class="frame"></div>
+        </div>  
+    </div>
+</section>
+
+<style>
+    #services {
+        padding: 64px 80px;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        max-width:1920px;
+    }
+    /* --- Services Selectors --- */
+    #services--selector {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        border-right:1px solid #78A691;
+        padding-right:40px;
+        position: relative;
+    }
+    #services--selector > h2 {
+        color:#0063A7;
+        font-size: 3.6rem;
+        font-weight: 400;
+        margin: 0px 0px 24px 0px;
+    }
+    .services--button {
+        background-color: transparent;
+        border: 0px solid #fff;
+        color: #212121;
+        Margin: 24px 0px;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: right;
+        position: relative;
+        transition: all 200ms linear;  
+    }
+    .services--button > .slider{
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        content: '';
+        background-color: #0063A7;
+        opacity: 0;
+        transition: all 200ms linear; 
+        pointer-events: none; 
+    
+    }
+    .services--button:hover  {
+        color: #0063A7;
+    }
+    .services--button:hover > .slider , .services--button.active > .slider
+    {
+        bottom: -4px;
+        opacity: 1;
+    }
+    .services--button.active  {
+        color: #0063A7;
+    }
+    #services--block {
+        position: absolute;
+        right: -3px;
+        top: 112px;
+        width: 8px;
+        height: 40px;
+        content: '';
+        background-color: #0063A7;
+        opacity: 1;
+        transition: all 200ms linear;   
+    }
+    /* --- Services Desc --- */
+    #services--descs{
+        padding: 24px 40px 0px 40px;
+    }
+    .services--descs--contain{
+        max-height:0px;
+        overflow-y: hidden;
+        transition: all 500ms ease;
+    }
+    .services--descs--contain.active{
+        max-height:100%;
+    }
+    .services--descs--contain > h3{
+        color:#0063A7;
+        font-weight:700;
+        font-size:1.8rem;
+        margin-bottom:24px;
+    }
+    .services--descs--contain > p{
+        color:#212121;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 2.2rem;
+        margin:0px;
+    }
+    .services--descs--contain > a{
+        display: block;
+        background-color:#0063A7;
+        color:#fff;
+        text-decoration: none;
+        font-size: 1.4rem;
+        padding: 12px 36px;
+        margin-top:32px;
+        width: fit-content;
+    }
+    /* --- Services Images --- */
+    #services--images {
+        height:475px;;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width:100%;
+    }
+    #services--images--contain {
+        position: relative;
+    }
+    #services--images--contain > img {
+        transform:translate(-12px , 12px);
+        display:none;
+    }
+    #services--images--contain > img.active {
+        max-height:350px;
+        display:block;
+    }
+    #services--images--contain > .frame {
+        background-color: transparent;
+        height: 234px;
+        width: 326px;
+        border: 12px solid #0063A7;
+        position: absolute;
+        top: -12px;
+        left: 12px;
+    }
+    /* Mobile Stuff */
+    #services--selector--mobile {
+        display: none;
+    }
+    @media only screen and (max-width: 1300px) { 
+        #services--images{
+            display:none;
+        }
+        #services {
+            grid-template-columns: auto 1fr;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) { 
+        #services { 
+            grid-template-columns: auto;
+            padding: 8px;
+        }
+        #services--selector--mobile {
+            display: Flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #services--selector--mobile > h2 {
+            color:#0063A7;
+            font-size: 3.6rem;
+            font-weight: 400;
+            margin: 0px 0px 16px 0px;
+        }
+        #services--selector--mobile > select {
+            color:#0063A7;
+            font-size: 1.1rem;
+            padding:4px 8px;
+        }
+        #services--selector {
+            display:none;
+        }
+        .services--descs--contain > h3 {
+            margin-top:0px;
+        }
+        #services--images {
+            height: calc(100% + 80px);
+            display:flex;
+        }
+        #services--descs {
+            padding:24px 0px 0px 0px;
+        }
+        #services--images--contain > img {
+            transform:translate(-8px , 8px);
+        }
+        #services--images--contain > .frame { 
+            top: -10px;
+            left: 10px;
+            
+        }
+    }
+
+
+</style>
+
+<script>
+    const buttons = document.getElementsByClassName('services--button');
+    
+    for (const button of buttons) {
+        button.addEventListener("click", e => {
+            let topic = e.srcElement.dataset.topic;
+            let height = e.srcElement.dataset.height
+            console.log(e, topic, height)
+            //---switch active and move Block
+            document.getElementById('services--block').style.top = `${height}px`;
+            document.querySelector('.services--button.active').classList.remove("active");
+            e.srcElement.classList.add('active');
+
+            //---hide current Desc & Image
+            slideUp()
+
+            //---show correct Desc & Image
+            slideDown(topic)
+            showImage(`${topic}--image`)
+
+        })
+    }
+
+    document.getElementById("services--picker__mobile").addEventListener("change", e => {
+        var topic = e.target.options[e.target.selectedIndex].dataset.topic;
+        //---hide current Desc & Image
+        slideUp()
+        //---show correct Desc & Image
+        slideDown(topic)
+        showImage(`${topic}--image`)
+    });
+
+    function slideUp() {
+        var elem = document.querySelector('.services--descs--contain.active');
+        elem.style.maxHeight = "0px";
+        elem.classList.remove("active")
+        var elem2 = document.querySelector('#services--images--contain > .active');
+        elem2.style.display = "none";
+        elem2.classList.remove("active")
+
+    }
+    function slideDown(el) {
+        var elem = document.getElementById(el);
+        elem.classList.add("active")
+        elem.style.maxHeight = "100%";
+    }
+    function showImage(el){
+        var elem = document.getElementById(el);
+        elem.classList.add("active")
+        elem.style.display = "block";
+    }
+</script>

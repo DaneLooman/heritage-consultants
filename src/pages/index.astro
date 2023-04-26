@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro'
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
 import { contentfulClient } from "../lib/contentful.js";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { Document } from "@contentful/rich-text-types";
@@ -31,6 +32,7 @@ console.log(posts);
 	pageForHeader="home" 
 	description="Heritage Consultants offers archaeological, GIS, architectural history, interpretive planning, grant writing, litigation research and much more.">
 	<Hero></Hero>
+  <Services></Services>
 </Layout>
 
 <style>
