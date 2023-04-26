@@ -6,6 +6,7 @@ import { contentfulClient } from "../lib/contentful.js";
 import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { Document } from "@contentful/rich-text-types";
 import type { BlogPost } from "../lib/contentful";
+import Sectors from '../components/Sectors.astro';
 
 const entries = await contentfulClient.getEntries<BlogPost>({
   content_type: "blogPost",
@@ -33,6 +34,7 @@ console.log(posts);
 	description="Heritage Consultants offers archaeological, GIS, architectural history, interpretive planning, grant writing, litigation research and much more.">
 	<Hero></Hero>
   <Services></Services>
+  <Sectors></Sectors>
 </Layout>
 
 <style>

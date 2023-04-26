@@ -1,0 +1,75 @@
+---
+
+---
+<section id="sectors">
+    <h2>Expertise for All Sectors</h2>
+    <div id="sectors--icons">
+        <div class="icon--contain">
+            <img src="" alt="" class="">
+            <p>Utility-Energy</p>
+        </div>
+        <div class="icon--contain">
+            <img src="" alt="" class="">
+            <p>Transportation</p>
+        </div>
+        <div class="icon--contain">
+            <img src="" alt="" class="">
+            <p>Private</p>
+        </div>
+        <div class="icon--contain">
+            <img src="" alt="" class="">
+            <p>Municipal</p>
+        </div>
+        <div class="icon--contain">
+            <img src="" alt="" class="">
+            <p>Telecom</p>
+        </div>       
+    </div>
+    
+</section>
+
+<style>
+    #sectors {
+        background-color: #0063A7;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding:48px;
+    }
+    #sectors > h2 {
+        color:#fff;
+        font-size: 3.6rem;
+        font-weight: 700;
+        margin: 0px 0px 24px 0px;
+    }
+    #sectors--icons {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        max-width: 1920px;
+        
+    }
+    .icon--contain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon--contain > p {
+        color:#fff;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 1000px) { 
+        #sectors {
+            padding: 48px 8px;
+        }
+        #sectors > h2 {
+            font-size: 2rem;
+        }
+        .icon--contain {
+            display: none;
+        }
+    }
+</style>
