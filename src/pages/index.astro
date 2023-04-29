@@ -2,31 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Services from '../components/Services.astro';
-import { contentfulClient } from "../lib/contentful.js";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
-import type { Document } from "@contentful/rich-text-types";
-import type { BlogPost } from "../lib/contentful";
 import Sectors from '../components/Sectors.astro';
+import News from '../components/news.astro';
+import Commited from '../components/Commited.astro';
 
-const entries = await contentfulClient.getEntries<BlogPost>({
-  content_type: "blogPost",
-  limit: 4,
-});
-
-const posts = entries.items.map((item) => {
-  const { title, date, description, slug, image, type } = item.fields;
-  return {
-    title,
-    slug,
-    description,
-    date: new Date(date).toLocaleDateString(undefined,{ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
-	imageDesc: image.fields.description,
-	imageURL: image.fields.file.url,
-	type
-  };
-});
-
-console.log(posts); 
 ---
 
 <Layout title="Heritage Consultants" 
@@ -35,6 +14,8 @@ console.log(posts);
 	<Hero></Hero>
   <Services></Services>
   <Sectors></Sectors>
+  <News></News>
+  <Commited></Commited>
 </Layout>
 
 <style>

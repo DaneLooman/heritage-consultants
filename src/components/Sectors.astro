@@ -5,26 +5,27 @@
     <h2>Expertise for All Sectors</h2>
     <div id="sectors--icons">
         <div class="icon--contain">
-            <img src="" alt="" class="">
+            <img src="./utility.svg" alt="icon of electrical pole" class="" height="100" width="130">
             <p>Utility-Energy</p>
         </div>
         <div class="icon--contain">
-            <img src="" alt="" class="">
+            <img src="./transport.svg" alt="icon of bus" class=""  height="100" width="130">
             <p>Transportation</p>
         </div>
         <div class="icon--contain">
-            <img src="" alt="" class="">
+            <img src="./private.svg" alt="icon of a house" class=""  height="100" width="130">
             <p>Private</p>
         </div>
         <div class="icon--contain">
-            <img src="" alt="" class="">
+            <img src="./municipal.svg" alt="icon of  school" class=""  height="100" width="130">
             <p>Municipal</p>
         </div>
         <div class="icon--contain">
-            <img src="" alt="" class="">
+            <img src="./telecom.svg" alt="icon of a cellphone tower" class=""  height="100" width="130">
             <p>Telecom</p>
         </div>       
     </div>
+    <img src="./5sectors.svg" alt="icon of a cellphone tower, school house, house, bus, and electrical pole" class="" id="mobile-sectors">
     
 </section>
 
@@ -41,7 +42,7 @@
         color:#fff;
         font-size: 3.6rem;
         font-weight: 700;
-        margin: 0px 0px 24px 0px;
+        margin: 0px 0px 32px 0px;
     }
     #sectors--icons {
         display: flex;
@@ -60,6 +61,9 @@
         font-weight: 700;
         font-size: 2rem;
     }
+    #mobile-sectors {
+        display: none;
+    }
 
     @media only screen and (max-width: 1000px) { 
         #sectors {
@@ -70,6 +74,10 @@
         }
         .icon--contain {
             display: none;
+        }
+        #mobile-sectors {
+            display: block;
+            width:350px;
         }
     }
 </style>

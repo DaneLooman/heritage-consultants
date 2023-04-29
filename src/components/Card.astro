@@ -1,63 +1,117 @@
 ---
 export interface Props {
 	title: string;
-	body: string;
+	desc: string;
 	href: string;
+	image: string;
+	tag: string;
+	type: string;
 }
 
-const { href, title, body } = Astro.props;
+const { title, desc, href, image, tag, type } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
+<div class={`card ${type}`}>
+	<p class="card--tag">{tag}</p>
+	<a class="card--image" href={href} style={`background-image: url("${image}"); background-position: center; background-repeat: no-repeat; background-size: cover;`}></a>
+	<h4>{title}</h4>
+	<hr>
+	<p class="card--desc">{desc}</p>
+	<a href={href} class="card--button">Read More</a>
+</div>
 <style>
-	.link-card {
-		list-style: none;
+	.card {
+		padding:16px;
+		border:2px solid #0063A7;
 		display: flex;
-		padding: 0.25rem;
-		background-color: white;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 0.6rem;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+		flex-direction: column;
+		align-items: center;
+		background-color: #fff;
+		color:#fff;
+		position: relative;
+		max-width: 367px;
+		margin: 0 8px 32px 8px;
+		height:100%;
+	}
+	.card--tag{
+		position: absolute;
+		top:0px;
+		right:16px;
+		background-color: #0063A7;
+		padding:4px;
+		font-weight: 700;
+		font-size: 1rem;
+	}
+	.card--image{
+		width:330px;
+		height:220px;
+	}
+	.card > h4 {
+		color:#212121;
+		text-align: center;
+		font-weight: 700;
+		font-size: 1.2rem;
+		margin: 18px 0px;
+
+	}
+	.card > hr {
+		width:90%;
+		background-color:#0063A7;
+		height:4px;
+		margin:0px;
+		border:0px solid #fff;
+		border-radius: 4px;
+	}
+	.card--desc {
+		color: #212121;
+		font-weight: 400;
+		line-height: 1.6rem;
+		text-align: center;
+	}
+	.card--button {
+		background-color:#0063A7;
+		color:#fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 12px 36px;
+        margin-top:0px;
+        width: fit-content;
+		border:0px solid #fff;
 	}
 
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 1rem 1.3rem;
-		border-radius: 0.35rem;
-		color: #111;
-		background-color: white;
-		opacity: 0.8;
+	/* Field Study turned Green */
+	.card.FieldStudy {
+		border: 2px solid #537F69;
 	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	.card.FieldStudy > .card--tag{
+		background-color: #537F69;
 	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-		color: #444;
+	.card.FieldStudy > hr{
+		background-color: #537F69;
 	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
+	.card.FieldStudy > .card--button{
+		background-color: #537F69;
 	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent));
+
+	/* Announcement */
+	.card.Announcement {
+		border: 2px solid #867365;
 	}
+	.card.Announcement > .card--tag{
+		background-color: #867365;
+	}
+	.card.Announcement > hr{
+		background-color: #867365;
+	}
+	.card.Announcement > .card--button{
+		background-color: #867365;
+	}
+
+	@media only screen and (max-width: 1200px) { 
+		.card {
+			margin: 0 4px 32px 4px;
+		}
+
+	}
+
 </style>
