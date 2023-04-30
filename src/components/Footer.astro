@@ -1,0 +1,67 @@
+---
+import { Icon } from 'astro-icon';
+---
+<footer>
+    <a href="tel:860-299-6328" aria-label="Call us at 860-299-6328"><Icon pack="feather" name="phone"/> 860.299.6328</a>
+    <a href="mailto:DGEORGE@HERITAGE-CONSULTANTS.COM" aria-label="email us at DGEORGE@HERITAGE-CONSULTANTS.COM"><Icon pack="feather" name="mail"/> DGEORGE@HERITAGE-CONSULTANTS.COM</a>
+    <a href="geo:41.6279307,-72.74313" target="_blank" aria-label="visit us at 830 BERLIN TPKE, BERLIN, CT 06037"><Icon pack="feather" name="map-pin"/> 830 BERLIN TPKE, BERLIN, CT 06037</a>
+    <div class="social">
+        <a href="" aria-label=""><Icon pack="feather" name="facebook"/></a>
+        <a href="" aria-label=""><Icon pack="feather" name="twitter"/></a>
+        <a href="" aria-label=""><Icon pack="feather" name="linkedin"/></a>
+    </div>
+    <p>Copyright ©2023 Heritage Consultants, LLC</p>
+
+</footer>
+<style>
+    [astro-icon] {
+        height:2rem;
+        margin: 0 1rem -2px 1rem;
+        display: inline-flex; 
+        flex-direction: row; 
+        align-items: end;
+        color: #0063A7;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:#0063A7;
+        padding:64px 0 40px 0;
+    }
+    footer > a {
+        text-decoration: none;
+        color: #0063A7;
+        font-size: 1.2rem;
+        margin-bottom:16px;
+        transition: color .2s ease;
+    }
+
+    footer > a >  [astro-icon] {
+        height: 16px;
+        margin-right:.6rem;
+        margin-left:0;
+    }
+    .social {
+        display: flex;
+        max-width: fit-content;
+        margin:16px;
+    }
+    .social > a {
+        transition: color .2s ease;
+    }
+
+    footer > a:hover , .social > a:hover , footer > a:hover > [astro-icon], .social > a:hover > [astro-icon]{
+        color:  #004575
+    } 
+
+    @media only screen and (max-width: 700px) { 
+        footer > a {
+            font-size: 1rem;
+            margin-bottom:24px;
+        }
+
+    }
+
+    
+</style>

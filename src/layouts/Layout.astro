@@ -10,6 +10,7 @@ import '@fontsource/roboto/100.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import Footer from '../components/Footer.astro';
 
 const { title , pageForHeader, description } = Astro.props;
 ---
@@ -29,6 +30,7 @@ const { title , pageForHeader, description } = Astro.props;
 		<main>
 			<slot />
 		</main>
+		<Footer></Footer>
 	</body>
 </html>
 <style is:global>
