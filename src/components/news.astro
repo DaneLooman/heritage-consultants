@@ -33,7 +33,7 @@ const posts = entries.items.map((item) => {
             title={post.title} 
             desc={post.description}
             image={'https://' + post.imageURL}
-            href={`./posts/${post.slug}`}
+            href={`./news/${post.slug}`}
             tag={post.type}
             type={post.type.replace(/\s/g, '')}
             ></Card>
