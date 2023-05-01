@@ -16,15 +16,37 @@ import Layout from '../layouts/Layout.astro';
         </div>
         <div id="projectManagers">
             <h2>Project Managers</h2>
-            <div class="managers--title"><img src="/HC-ReneePetruzelli.webp" alt="Picture of CEO David George" height="500" width="500"><h2>Renee Petruzelli, M.A.</h2></div>
-            <div class="managers--title"><img src="/HC-AntonioMedina.webp" alt="Picture of CEO David George" height="500" width="500"><h2>Antonio Medina, B.A.</h2></div>
-            <div class="managers--title"><img src="/HC-DanielZoto.webp" alt="Picture of CEO David George" height="500" width="500"><h2>Daniel Zoto, M.A., RPA</h2></div>
-            <div class="managers--title"><img src="/HC-BrennaPisanelli.webp" alt="Picture of CEO David George" height="500" width="500"><h2>Brenna Pisanelli, M.A.</h2></div>
+            <div class="managers--title"><img src="/HC-ReneePetruzelli.webp" alt="Picture of Renee Petruzelli" height="500" width="500"><h2>Renee Petruzelli, M.A.</h2></div>
+            <div class="managers--title"><img src="/HC-AntonioMedina.webp" alt="Picture of Antonio Medina" height="500" width="500"><h2>Antonio Medina, B.A.</h2></div>
+            <div class="managers--title"><img src="/HC-DanielZoto.webp" alt="Picture of Daniel Zoto" height="500" width="500"><h2>Daniel Zoto, M.A., RPA</h2></div>
+            <div class="managers--title"><img src="/HC-BrennaPisanelli.webp" alt="Picture Brenna Pisanelli" height="500" width="500"><h2>Brenna Pisanelli, M.A.</h2></div>
             <!-- <p class="managers--bio">Ms. Renee Petruzelli serves as Project Manager at Heritage Consultants. She earned a Master’s Degree in  Anthropology from the University of Connecticut and is a Registered Professional Archaeologist. She has considerable experience in the areas of zooarchaeology, lithic and precontact era ceramic studies, eighteenth and nineteenth century material culture analysis, and artifact conservation techniques. Ms. Petruzelli routinely completes projects throughout Connecticut, Massachusetts, Rhode Island, New Hampshire, and New York. including roadway improvement efforts, bridge replacements, solar centers, large and small electrical transmission and distribution projects, and other infrastructural endeavors, as well as many private development projects.</p>
             <p class="managers--bio">Mr. Antonio Medina serves as Senior Archaeologist and Operations Manager at Heritage Consultants. He earned a Bachelor of Arts degree in Anthropology from Hartwick College in 1993 and has supervised dozens of cultural resources management projects in Maine, Vermont, New Hampshire, Connecticut, Rhode Island, Massachusetts, and New York. He has extensive experience working on electric transmission projects, natural gas, wind, solar, and other infrastructure improvement projects such as airports, railway lines, and highways.</p>
             <p class="managers--bio">Mr. Zoto serves as a Project Manager at Heritage Consultants and has more than 12 years of professional experience in New England archaeology.  He holds an M.A. from the University of Connecticut and a B.A. from the University of Massachusetts, Amherst. He is a Registered Professional Archaeologist (RPA# 5123). Dan has worked on more than 125 cultural resources projects and has been the lead or co-author on more than 50 technical reports associated with these projects. He specializes in lithic analysis, field methods, and public outreach. </p>
             <p class="managers--bio">Ms. Pisanelli is a Project Manager at Heritage Consultants who graduated from Roger Williams University in 2017 with a Bachelor of Science in Historic Preservation and a Bachelor of Arts in Anthropology & Sociology as well as Art & Architectural History. She earned her Master of Arts degree in American Studies from Brown University in 2019. Working from an interdisciplinary lens, her research focuses on how concepts surrounding authenticity and historical narrative impact the construction of cultural identities and sense of place, and how this informs our preservation practices. She believes in the importance of public outreach and creating visibility and accessibility within the industry.</p>-->
         </div> 
+        <div id="twoSectionsWide">
+            <div id="history">
+                <h2>History Department</h2>
+                <div class="twoWide--title"><img src="/HC-DavidNaumec.webp" alt="Picture of David Naumec" height="500" width="500"><h2>David Naumec, Ph.D.</h2></div>
+                <div class="twoWide--title"><img src="/HC-NitaVitaliano.webp" alt="Picture of Nita Vitaliano" height="500" width="500"><h2>Nita Vitaliano, M.A.</h2></div>
+            </div>
+            <div id="arch" class="blue">
+                <h2>Project Archaeologists</h2>
+                <div class="twoWide--title"><img src="/HC-StephanieScialo.webp" alt="Picture of Stephanie Scialo, B.A." height="500" width="500"><h2>Stephanie Scialo, B.A.</h2></div>
+                <div class="twoWide--title"><img src="/HC-LindaSeminario.webp" alt="Picture of Linda Seminario, B.A." height="500" width="500"><h2>Linda Seminario, B.A.</h2></div>
+            </div>
+            <div id="gis" class="blue">
+                <h2>GIS Department</h2>
+                <div class="twoWide--title"><img src="/HC-SeanBuckley.webp" alt="Picture of Sean Buckley, B.A." height="500" width="500"><h2>Sean Buckley, B.A.</h2></div>
+                <div class="twoWide--title"><img src="/HC-TevinJourdain.webp" alt="Picture of Tevin Jourdain, B.A." height="500" width="500"><h2>Tevin Jourdain, B.A.</h2></div>
+            </div>
+            <div id="lab">
+                <h2>Laboratory Department</h2>
+                <div class="twoWide--title"><img src="/HC-SusannahGoeters.webp" alt="Picture of Susannah Goeters, B.A." height="500" width="500"><h2>Susannah Goeters, B.A.</h2></div>
+                <div class="twoWide--title"><img src="/HC-EricaLang.webp" alt="Picture of Erica Lang, B.A." height="500" width="500"><h2>Erica Lang, B.A.</h2></div>
+            </div>
+        </div>
     
     </section>
     <section id="jobs">
@@ -118,6 +140,78 @@ import Layout from '../layouts/Layout.astro';
         font-size: 1rem;
         line-height: 1.8rem;
     }
+    #twoSectionsWide {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #twoSectionsWide > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        padding: 136px 48px 48px 48px;
+        gap:48px;
+    }
+    #twoSectionsWide > div > h2 {
+        color:#fff;
+        background-color: #0063A7;
+        padding: 16px 32px 16px 10%;
+        text-align: center;
+        position: absolute;
+        left:0;
+        top:24px;
+        font-size: 3rem;
+        font-weight: 700;
+        margin:0;
+    }
+    .blue {
+        background-color: #0063A7;
+        color:#fff;
+    }
+    #twoSectionsWide > .blue > h2 {
+        padding: 16px 10% 16px 32px;
+        background-color:#fff;
+        color: #0063A7;
+        right: 0;
+        left:auto;
+        margin:0;
+    }
+    .twoWide--title {
+        width:100%;
+        position: relative;
+        aspect-ratio: 1;
+    }
+    .twoWide--title > img {
+        max-height: 100%;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .twoWide--title > h2 {
+        position: absolute;
+        bottom: 24px;
+        left: -12px;
+        margin:0;
+        background-color: #0063A7;
+        padding: 8px 16px;
+        color:#fff;
+    }
+    .blue > .twoWide--title > h2 { 
+        background-color: #fff;
+        color:#0063A7;
+    }
+
+   #twoSectionsWide > #gis > h2 {
+        left: 0px;
+        right:auto;
+        padding: 16px 32px 16px 10%;
+    }
+
+    #twoSectionsWide > #lab > h2 {
+        right: 0px;
+        left:auto;
+        padding: 16px 10% 16px 32px;
+    }
 
     @media only screen and (max-width: 1300px) { 
         .leadership--title > h2 {
@@ -125,6 +219,12 @@ import Layout from '../layouts/Layout.astro';
         }
         .managers--title > h2 {
             font-size: 1rem;
+        }
+        .twoWide--title > h2 {
+            font-size: 1rem;
+        }
+        #twoSectionsWide > div > h2 {
+            font-size:1.4rem;
         }
     }
     @media only screen and (max-width: 1000px) { 
@@ -151,6 +251,9 @@ import Layout from '../layouts/Layout.astro';
             grid-template-columns: 1fr 1fr;
             row-gap: 48px;
         }
+        #twoSectionsWide > div {
+            grid-template-columns: 1fr;
+        }
     }
     @media only screen and (max-width: 500px) { 
         #projectManagers {
@@ -159,6 +262,16 @@ import Layout from '../layouts/Layout.astro';
         }
         #projectManagers > h2 {
             font-size: 2.2rem;
+        }
+        #twoSectionsWide {
+            grid-template-columns: 1fr;
+        }
+        #gis {
+            grid-row: 4 / 5;
+        }
+        #twoSectionsWide > #lab > h2 , #twoSectionsWide > #arch > h2 {
+            left: 0px;
+            right:auto;
         }
     }
 
