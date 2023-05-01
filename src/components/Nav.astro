@@ -41,7 +41,7 @@ links.forEach(link => {
 
 <header>
     <div id="nav--contain">
-        <button id="nav--logo__button" aria-label="Logo to click to go home"><img width="184" height="62" src="/logo.webp" id="nav--logo__image" alt="Heritage Consultants Logo which is a circle. The top half is buildings with the bottom half showing ground beneath."></button>
+        <a href="/" id="nav--logo__button" aria-label="Logo to click to go home"><img width="184" height="62" src="/logo.webp" id="nav--logo__image" alt="Heritage Consultants Logo which is a circle. The top half is buildings with the bottom half showing ground beneath."></a>
         <nav>
             {links.map((link) => (
                  <a class={link.class} href={link.link}>{link.label}<span class="slider"></span></a>

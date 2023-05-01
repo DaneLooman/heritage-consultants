@@ -77,6 +77,11 @@ const { title, desc, href, image, tag, type } = Astro.props;
         margin-top:0px;
         width: fit-content;
 		border:0px solid #fff;
+		transition: background-color 200ms ease;
+	}
+	.card--button:hover{
+		cursor: pointer;
+        background-color: #004575;
 	}
 
 	/* Field Study turned Green */
@@ -92,6 +97,9 @@ const { title, desc, href, image, tag, type } = Astro.props;
 	.card.FieldStudy > .card--button{
 		background-color: #537F69;
 	}
+	.card.FieldStudy > .card--button:hover{
+		background-color: #3a594a;
+	}
 
 	/* Announcement */
 	.card.Announcement {
@@ -105,6 +113,9 @@ const { title, desc, href, image, tag, type } = Astro.props;
 	}
 	.card.Announcement > .card--button{
 		background-color: #867365;
+	}
+	.card.Announcement > .card--button:hover{
+		background-color: #5e5147;
 	}
 
 	@media only screen and (max-width: 1200px) { 
