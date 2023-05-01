@@ -57,7 +57,6 @@
             <img id="gis--image" class="" src="GIS.webp" alt="Classic weathered map of Hartford" loading="lazy" width="350" height="250">
             <img id="cemetery--image" class="" src="cemetery.webp" alt="Image of cemetery being excavated" loading="lazy" width="350" height="250">
             <img id="gis2--image" class="" src="GIS2.webp" alt="Topography Map" loading="lazy" width="350" height="250">
-            <div class="frame"></div>
         </div>  
     </div>
 </section>
@@ -186,21 +185,12 @@
         position: relative;
     }
     #services--images--contain > img {
-        transform:translate(-12px , 12px);
         display:none;
+        border: 12px solid #0063A7;
     }
     #services--images--contain > img.active {
         max-height:350px;
         display:block;
-    }
-    #services--images--contain > .frame {
-        background-color: transparent;
-        height: 260px;
-        width: 360px;
-        border: 12px solid #0063A7;
-        position: absolute;
-        top: -12px;
-        left: 8px;
     }
     /* Mobile Stuff */
     #services--selector--mobile {
@@ -250,14 +240,6 @@
         }
         #services--descs {
             padding:24px 0px 0px 0px;
-        }
-        #services--images--contain > img {
-            transform:translate(-8px , 8px);
-        }
-        #services--images--contain > .frame { 
-            top: -10px;
-            left: 0px;
-            
         }
     }
 
