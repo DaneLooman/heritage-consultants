@@ -30,12 +30,12 @@
         </div>
         <div id="history" class="services--descs--contain">
             <h3>Architectural History</h3>
-            <p>Architectural History is related to the study of historic buildings, structures, objects, and other aspects of the “built environment.” These historic resources oftentimes yield important information about their owner’s/architects, function/technology, and how they have been altered over time. Investigations can typically includes site plans, photographic documentation, measured drawings, architectural analysis and description, and comprehensive literature and archival searches. This effort is typically undertaken to interpret and preserve our collective built heritage, as part of a larger historical account of a particular resource/area, or as part of a mitigation process for a historically significant resource that cannot be avoided by development.</p>
+            <p>Architectural History is related to the study of historic buildings, structures, objects, and other aspects of the “built environment.” These historic resources oftentimes yield important information about their owner's/architects, function/technology, and how they have been altered over time. Investigations can typically includes site plans, photographic documentation, measured drawings, architectural analysis and description, and comprehensive literature and archival searches. This effort is typically undertaken to interpret and preserve our collective built heritage, as part of a larger historical account of a particular resource/area, or as part of a mitigation process for a historically significant resource that cannot be avoided by development.</p>
             <a href="#">View Case Study</a>
         </div>
         <div id="gis" class="services--descs--contain">
             <h3>Geographic and Information Services</h3>
-            <p>Our goal in using Geographic Information Systems (GIS) is to help our client better gain an advantage from the large amount of geographic data we have at our disposal. Having this much data at our fingertips allows our firm to identify “up front” any project constraints that may exist. We are the only cultural resources management firm in the region that owns and maintains this amount of data, and we can put it to work for you!</p>
+            <p>Our goal in using Geographic Information Systems (GIS) is to help our clients better gain an advantage from the large amount of geographic data we have at our disposal. Having this much data at our fingertips allows our firm to identify “up front” any project constraints that may exist. We are the only cultural resources management firm in the region that owns and maintains this amount of data, and we can put it to work for you!</p>
             <a href="#">View Case Study</a>
         </div>
         <div id="cemetery" class="services--descs--contain">
@@ -52,11 +52,11 @@
     </div>
     <div id="services--images">
         <div id="services--images--contain">
-            <img id="arch--image" class="active" src="arch.webp" alt="Picture of a historical red bridge" loading="lazy" width="350" height="250">
-            <img id="history--image" class="" src="history.webp" alt="Picture of classic colonial white house" loading="lazy" width="350" height="250">
-            <img id="gis--image" class="" src="GIS.webp" alt="Classic weathered map of Hartford" loading="lazy" width="350" height="250">
-            <img id="cemetery--image" class="" src="cemetery.webp" alt="Image of cemetery being excavated" loading="lazy" width="350" height="250">
-            <img id="gis2--image" class="" src="GIS2.webp" alt="Topography Map" loading="lazy" width="350" height="250">
+            <img id="arch--image" class="active" alt="Picture of a historical red bridge" loading="lazy" srcset="arch.webp 350w, arch-b.webp 500w" sizes="(maxWidth : 350px) 350px , (maxWidth : 500px) 500px">
+            <img id="history--image" class="" alt="Picture of classic colonial white house" loading="lazy" srcset="history.webp 350w, history-b.webp 500w" sizes="(maxWidth : 350px) 350px , (maxWidth : 500px) 500px">
+            <img id="gis--image" class="" alt="Classic weathered map of Hartford" loading="lazy" srcset="GIS.webp 350w, GIS-b.webp 500w" sizes="(maxWidth : 350px) 350px , (maxWidth : 500px) 500px">
+            <img id="cemetery--image" class="" alt="Image of cemetery being excavated" loading="lazy" srcset="cemetery.webp 350w, cemetery-b.webp 500w" sizes="(maxWidth : 350px) 350px , (maxWidth : 500px) 500px">
+            <img id="gis2--image" class="" alt="Topography Map" loading="lazy" srcset="GIS2.webp 350w, GIS2-b.webp 500w" sizes="(maxWidth : 350px) 350px , (maxWidth : 500px) 500px">
         </div>  
     </div>
 </section>
@@ -173,7 +173,7 @@
 
     /* --- Services Images --- */
     #services--images {
-        height:475px;;
+        height:100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -196,7 +196,19 @@
     #services--selector--mobile {
         display: none;
     }
-    @media only screen and (max-width: 1300px) { 
+    @media only screen and (max-width: 1500px) { 
+        #services--images { 
+            max-width: 350px;
+        }
+        #services--images--contain > img.active {
+            max-width: 100%;
+            max-height:350px;
+            display:block;
+        }
+    }
+
+
+    @media only screen and (max-width: 1350px) { 
         #services--images{
             display:none;
         }
@@ -232,7 +244,9 @@
         .services--descs--contain > h3 {
             margin-top:0px;
         }
+        
         #services--images {
+            max-width: 100%;
             height: 100%;
             display:flex;
             align-items: flex-start;
@@ -240,6 +254,11 @@
         }
         #services--descs {
             padding:24px 0px 0px 0px;
+        }
+        #services--images--contain > img.active {
+            max-width: 100%;
+            max-height:357px;
+            display:block;
         }
     }
 

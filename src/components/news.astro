@@ -28,14 +28,14 @@ const posts = entries.items.map((item) => {
     <p>Heritage Consultants</p>
     <h2>In the News</h2>
     <div id="news--articles">
-        {posts.map((post) => (
+        {posts.map((post , index) => (
             <Card
             title={post.title} 
             desc={post.description}
             image={'https://' + post.imageURL}
             href={`./news/${post.slug}`}
             tag={post.type}
-            type={post.type.replace(/\s/g, '')}
+            type={index.toString()}
             ></Card>
         ))}
     </div>
