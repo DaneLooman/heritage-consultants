@@ -85,11 +85,10 @@ import Layout from '../layouts/Layout.astro';
         max-width: 50%;
         position: relative;
         overflow-y: auto;
+        overflow-x: hidden;
         margin-top:73px;
         max-height: calc(100svh - 73px);
-    }
-    #overlay--contain > p {
-        display: none;
+        
     }
     #overlay--button {
         padding:4px 16px;
@@ -103,7 +102,7 @@ import Layout from '../layouts/Layout.astro';
         font-size: 3rem;
         transition: all 400ms ease;
         float:right;
-        margin-top:-49px;
+        margin-top:-48px;
         margin-right:-61px;
     }
     #overlay--button:hover{
@@ -112,6 +111,7 @@ import Layout from '../layouts/Layout.astro';
         background-color: #fff;
     }
     #overlay--contain > p {
+        display: none;
         margin:0;
         padding: 0;
         font-size: 1.2rem;
