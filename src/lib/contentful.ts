@@ -18,6 +18,24 @@ export interface BlogPost {
   };
 }
 
+export interface JobListing {
+  title: string;
+  slug: string;
+  description: string;
+  salary: string;
+  duties: Document;
+  qualifications: Document;
+  benefits: Document;
+  image: {
+      fields:{
+        description:string,
+        file:{
+          url:string;
+        }
+      }
+  };
+}
+
 export const contentfulClient = contentful.createClient({
   space: import.meta.env.CONTENTFUL_SPACE_ID,
   accessToken: import.meta.env.DEV

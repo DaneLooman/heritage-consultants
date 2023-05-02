@@ -1,0 +1,109 @@
+---
+import { contentfulClient } from "../lib/contentful.js";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { Document } from "@contentful/rich-text-types";
+import type { JobListing } from "../lib/contentful";
+import Layout from "../layouts/Layout.astro";
+import CardJob from "../components/Card-Job.astro";
+import Card from "../components/Card.astro";
+
+const  jobsJSON = await contentfulClient.getEntries<JobListing>({
+    content_type: "jobListing",
+    limit:8
+});
+
+const jobs = jobsJSON.items.map((item) => {
+    const { title, description, slug, image, salary, duties, qualifications, benefits } = item.fields;
+    return {
+        title,
+        slug,
+        description,
+        imageDesc: image.fields.description,
+        imageURL: image.fields.file.url,
+        salary: salary,
+        duties: documentToHtmlString(duties),
+        qualifications: documentToHtmlString(qualifications),
+        benefits: documentToHtmlString(benefits),
+    };
+});
+
+
+
+---
+<Layout description="See all the current job postsings at Heritage Consultants." pageForHeader="employment" title="Work at Heritage Consultants">
+    <section id="jobs"> 
+        <h1>Work At Heritage</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Our Current Opennings</h2>
+        <div id="jobs--postings">
+        {    
+            jobs.map((post , i) => (
+                 <CardJob
+                    title={post.title} 
+                    desc={post.description}
+                    image={'https://' + post.imageURL}
+                    imageDesc={post.imageDesc}
+                    salary={post.salary}
+                    duties={post.duties}
+                    qualifications={post.qualifications}
+                    benefits={post.benefits}
+                ></CardJob>     
+            ))}
+            </div>
+    </section>
+</Layout>
+<style>
+    #jobs {
+        width: 100%;
+        max-width: 1920px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h1 , h2{
+        font-size: 3rem;
+        color: #fff;
+        background-color: #0063A7;
+        font-weight: 400;
+        padding: 16px 32px;
+        align-self: flex-start;
+        margin-bottom: 64px;
+        padding-left: 10%;
+    }
+    #jobs > p {
+        color:#212121;
+        max-width:900px;
+        margin: 0px;
+        margin-bottom: 2rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        max-width: 900px;
+        line-height: 2.4rem;
+        padding:0px 8px;
+    }
+
+    #jobs--postings {
+        display: grid;
+        padding:0px 48px;
+        grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+        width:100%;
+        column-gap: 48px;
+    }
+
+    @media only screen and (max-width: 1000px){
+        #jobs--postings{
+            grid-template-columns: 100%;
+        }
+    }
+    @media only screen and (max-width: 600px){
+        h1 , h2{
+            font-size:1.8rem;
+            margin-bottom:40px;
+        }
+        #jobs--postings{
+            padding: 0 16px;
+        }
+    }
+
+
+</style>
