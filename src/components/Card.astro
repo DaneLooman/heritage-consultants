@@ -13,7 +13,7 @@ const { title, desc, href, image, tag, type } = Astro.props;
 
 <div class={`card ${type}`}>
 	<p class="card--tag">{tag}</p>
-	<a aria-label={`link to article ${title}`} class="card--image" href={href} style={`background-image: url("${image}"); background-position: center; background-repeat: no-repeat; background-size: cover;`}></a>
+	<a aria-label={`link to article ${title}`} class="card--image" href={href} style={`background-image: url("${image}?w=330&h=220"); background-position: center; background-repeat: no-repeat; background-size: cover;`}></a>
 	<h3>{title}</h3>
 	<hr>
 	<p class="card--desc">{desc}</p>
