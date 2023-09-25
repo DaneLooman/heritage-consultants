@@ -357,8 +357,11 @@ import Layout from '../layouts/Layout.astro';
         .twoWide--title > h2 {
             font-size: 1rem;
         }
-        #twoSectionsWide > div > h2 {
+        #twoSectionsWide > div > h2 , #arch > h2{
             font-size:1.4rem;
+        }
+        #leadership > div:nth-child(6) {
+            grid-row-start: 7;
         }
     }
     @media only screen and (max-width: 1000px) { 
@@ -397,7 +400,7 @@ import Layout from '../layouts/Layout.astro';
         .leadership--bio:nth-of-type(2){
             grid-row-start: 4;
         }
-        #projectManagers , #gis {
+        #projectManagers , #gis , #arch {
             grid-template-columns: 1fr 1fr;
             row-gap: 48px;
         }
@@ -406,12 +409,12 @@ import Layout from '../layouts/Layout.astro';
         }
     }
     @media only screen and (max-width: 500px) { 
-        #projectManagers , #gis {
+        #projectManagers , #gis , #arch{
             grid-template-columns: 1fr;
             row-gap: 24px;
         }
-        #projectManagers > h2 , #gis > h2{
-            font-size: 2.2rem;
+        #projectManagers > h2 , #gis > h2 , #arch > h2 , #operations > h2{
+            font-size: 1.4rem;
         }
         #twoSectionsWide {
             grid-template-columns: 1fr;
