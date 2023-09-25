@@ -360,9 +360,6 @@ import Layout from '../layouts/Layout.astro';
         #twoSectionsWide > div > h2 , #arch > h2{
             font-size:1.4rem;
         }
-        #leadership > div:nth-child(6) {
-            grid-row-start: 7;
-        }
     }
     @media only screen and (max-width: 1000px) { 
         #overlay--contain {
@@ -406,6 +403,9 @@ import Layout from '../layouts/Layout.astro';
         }
         #twoSectionsWide > div {
             grid-template-columns: 1fr;
+        }
+        #leadership > div:nth-child(6) {
+            grid-row-start: 7;
         }
     }
     @media only screen and (max-width: 500px) { 
