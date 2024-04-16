@@ -23,7 +23,6 @@ import Layout from '../layouts/Layout.astro';
                 <p class="overlay--text" id="overlay--text--15"><strong>Jeffrey Brown -</strong> Jeffrey Brown is a highly skilled GIS specialist with a passion for history. As a valued member of the team at Heritage Consultants, he leverages his expertise in Geographic Information Systems to provide innovative solutions for a wide range of clients.  Jeffrey graduated from the esteemed University of Massachusetts Amherst with a Bachelor of Science degree, where he eagerly filled his electives with GIS courses to further hone his skills. With an unwavering interest in history, Jeffrey was thrilled to join Heritage Consultants and work on projects that allow him to explore the past through the lens of GIS. He takes great pride in his work, ensuring that each project is executed with the utmost precision and attention to detail.</p>
                 <p class="overlay--text" id="overlay--text--16"><strong>Sam Spitzschuh B.A. -</strong> Mr. Spitzschuh studied Anthropology and History at the University of Connecticut from 2014 to 2018 and has been working in the cultural resource industry since then. At Heritage Sam has worked in the field on a variety of projects over the years and loves excavating Native American archaeological sites, traveling throughout the northeast, and learning about  lithic technology  in the area.</p> 
                 <p class="overlay--text" id="overlay--text--17"><strong>Fiona Jones -</strong> Ms. Jones received her B.A. in biological anthropology with a minor in law from the University at Buffalo in 2021. She has extensive archaeological experience in cultural resource management and public archaeology in New England beginning in 2016. Fiona dedicated some of her undergraduate studies to GIS and began working with Dr. Leslie in 2020. In addition to her work at Heritage as a Geophysical Specialist, Fiona works for the University of Rhode Island's Department of Anthropology as a repatriation coordinator. Her interests include decolonization and human rights as they apply to archaeology and geophysical sciences.</p>
-                <p class="overlay--text" id="overlay--text--18"><strong>Eric Heffter, Ph.D. -</strong> Dr. Heffter, a Senior Project Manager at Heritage Consultants, has over 15 years of experience studying the archaeology of North America and Central and Southeastern Europe.  A former Fulbright Scholar, Eric earned his Ph.D. in Anthropology from the University of Arizona in 2021.  His dissertation focused on population movements in Southeastern Europe and the Balkans during the Early Upper Paleolithic.  He has spent the past several years working in cultural resources management in New England, including on several large-scale data recovery programs.  His research interests include GIS analysis, geoarchaeology and lithic analysis.</p>
             </div>
     </div>
     <section id="team">
@@ -37,6 +36,10 @@ import Layout from '../layouts/Layout.astro';
             <div class="leadership--title"><img src="/HC-BrennaPisanelli.webp" alt="Headshot of Breanna Pisanelli." height="500" width="500"><h2>Brenna Pisanelli, M.A.</h2></div>
             <p class="leadership--bio">Dr. Leslie is the Director of Research at Heritage Consultants and has over 20 years of archaeological experience.  He is a geoarchaeologist and lithic specialist, and earned his Ph.D. in Anthropology at the University of Connecticut.  He has worked at all levels of archaeology and spent the last eight years as a Principal Investigator in the Northeast, designing and implementing all phases of archaeological survey and recovery, including geophysical and geoarchaeological investigations.  His work has been published in peer-reviewed journals such as Science, PaleoAmerica, Archaeology of Eastern North America, and Northeast Anthropology.<br><a href="mailto:DLESLIE@HERITAGE-CONSULTANTS.COM">DLeslie@Heritage-Consultants.com</a></p>
             <p class="leadership--bio">Ms. Pisanelli, a Senior Project Manager at Heritage Consultants, graduated from Roger Williams University in 2017 with a Bachelor of Science in Historic Preservation and a Bachelor of Arts in Anthropology & Sociology as well as Art & Architectural History. She earned her Master of Arts degree in American Studies from Brown University in 2019. Working from an interdisciplinary lens, her research focuses on how concepts surrounding authenticity and historical narrative impact the construction of cultural identities and sense of place, and how this informs our preservation practices. She believes in the importance of public outreach and creating visibility and accessibility within the industry.</p>
+            <div class="leadership--title"><img src="/HC-EricHeffter.webp" alt="Headshot of Eric Heffter Ph.D." height="500" width="500"><h2>Eric Heffter, Ph.D.</h2></div>
+            <div class="leadership--title"></div>
+            <p class="leadership--bio">Dr. Heffter, a Senior Project Manager at Heritage Consultants, has over 15 years of experience studying the archaeology of North America and Central and Southeastern Europe.  A former Fulbright Scholar, Eric earned his Ph.D. in Anthropology from the University of Arizona in 2021.  His dissertation focused on population movements in Southeastern Europe and the Balkans during the Early Upper Paleolithic.  He has spent the past several years working in cultural resources management in New England, including on several large-scale data recovery programs.  His research interests include GIS analysis, geoarchaeology and lithic analysis.   </p>
+            <p class="leadership--bio"></p>
         </div>
         <div id="operations" class="blue">
             <h2>Operations Manager</h2>
@@ -47,7 +50,6 @@ import Layout from '../layouts/Layout.astro';
             <div class="managers--title"><img data-p="1" role="button" src="/HC-ReneePetruzelli.webp" alt="Picture of Renee Petruzelli" height="500" width="500"><h2>Renee Petruzelli, M.A.</h2></div>
             <div class="managers--title"><img data-p="3" role="button" src="/HC-DanielZoto.webp" alt="Picture of Daniel Zoto" height="500" width="500"><h2>Daniel Zoto, M.A., RPA</h2></div>
             <div class="managers--title"><img data-p="13" role="button" src="/HC-EliseManningSterling.webp" alt="Picture of Elise Manning-Sterling" height="500" width="500"><h2>Elise Manning-Sterling, M.A.</h2></div>
-            <div class="managers--title"><img data-p="18" role="button" src="/HC-EricHeffter.webp" alt="Picture of Eric Heffter" height="500" width="500"><h2>Eric Heffter, Ph.D.</h2></div>
         </div> 
         <div id="gis" class="blue">
             <h2>GIS Department</h2>
@@ -211,6 +213,7 @@ import Layout from '../layouts/Layout.astro';
     .leadership--bio {
         font-size: 1.2rem;
         line-height: 1.8rem;
+        margin-bottom:2.4rem;
     }
     .leadership--bio > a {
         display: block;
@@ -239,11 +242,6 @@ import Layout from '../layouts/Layout.astro';
         align-items: stretch;
         justify-items: center;
     }
-
-    #projectManagers {
-        grid-template-columns: repeat(4 , 1fr);
-    }
-
 
     #projectManagers > h2 ,  #gis > h2 , #operations > h2 , #arch > h2{
         padding: 16px 32px 16px 10%;
