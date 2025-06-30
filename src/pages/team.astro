@@ -252,6 +252,15 @@ import Layout from '../layouts/Layout.astro';
     #projectManagers , #SRprojectManagers, #gis{
         grid-template-columns: repeat(2 , 1fr);
     }
+    #gis{
+        grid-template-columns: repeat(4 , 1fr);
+    }
+
+    #gis > .managers--title , #arch > .managers--title {
+        max-height: 295px;
+        max-width: 295px;
+
+    }
 
     #projectManagers > h2 ,  #gis > h2 , #operations > h2 , #arch > h2 , #SRprojectManagers > h2{
         padding: 16px 32px 16px 10%;
